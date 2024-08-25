@@ -6,39 +6,46 @@
 <body>
 
 <div class="w3-container">
-  <h2>Tabs</h2>
-  <p>Tabs are perfect for single page web applications, or for web pages capable of displaying different subjects. Click on the links below.</p>
+  <h2>Ameera I</h2>
+  <p>Resume</p>
 </div>
 
 <div class="w3-bar w3-black">
-  <button class="w3-bar-item w3-button" onclick="openCity('London')">London</button>
-  <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
-  <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</button>
+  <button class="w3-bar-item w3-button" onclick="openTab('Overview')">OVERVIEW</button>
+  <button class="w3-bar-item w3-button" onclick="OpenTab('About')">ABOUT ME</button>
+  <button class="w3-bar-item w3-button" onclick="OpenTab('Projects')">PROJECTS</button>
+  <button class="w3-bar-item w3-button" onclick="OpenTab('Contact')">CONTACT</button>
 </div>
 
-<div id="London" class="w3-container city">
-  <h2>London</h2>
-  <p>London is the capital city of England.</p>
+<div id="Overview" class="w3-container tabname">
+  <h2>OverView</h2>
+  <p>Over View</p>
 </div>
 
-<div id="Paris" class="w3-container city" style="display:none">
-  <h2>Paris</h2>
-  <p>Paris is the capital of France.</p> 
+<div id="About" class="w3-container tabname" style="display:none">
+  <h2>About</h2>
+  <p>About</p> 
 </div>
 
-<div id="Tokyo" class="w3-container city" style="display:none">
-  <h2>Tokyo</h2>
-  <p>Tokyo is the capital of Japan.</p>
+<div id="Projects" class="w3-container tabname" style="display:none">
+  <h2>Projects</h2>
+  <p>Projects</p>
 </div>
 
+<div id="Contact" class="w3-container tabname" style="display:none">
+  <h2>Contact</h2>
+  <p>Contact</p>
+</div>
+
+  
 <script>
-function openCity(cityName) {
+function OpenTab(tab) {
   var i;
-  var x = document.getElementsByClassName("city");
+  var x = document.getElementsByClassName("tabname");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";  
   }
-  document.getElementById(cityName).style.display = "block";  
+  document.getElementById(tab).style.display = "block";  
 }
 </script>
 
